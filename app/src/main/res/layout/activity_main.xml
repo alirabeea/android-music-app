@@ -4,57 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#500000"
+    android:background="#400000"
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:paddingBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
 
         <LinearLayout
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/round_back_10">
 
             <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_margin="10dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/search_icon"/>
+                android:src="@drawable/search_icon" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/round_back_10">
 
             <ImageView
-                android:textStyle="bold"
-                android:textSize="18sp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_margin="10dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/menu_icon"/>
+                android:src="@drawable/menu_icon"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mosiga"
             android:layout_centerInParent="true"
-            android:textColor="#FFFFFF"
             android:fontFamily="@font/raleway"
-            android:textSize="25dp"/>
+            android:text="Mosiga"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
     </RelativeLayout>
 
     <LinearLayout
@@ -99,7 +99,46 @@
                 android:layout_height="wrap_content"
                 android:text="00:00"/>
         </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginEnd="20dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/previous_icon"
+                android:background="@drawable/round_back_10"
+                android:padding="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                app:cardBackgroundColor="#330000"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:outlineAmbientShadowColor="#330000"
+                android:outlineSpotShadowColor="#330000">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/play_icon"/>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/next_icon"
+                android:background="@drawable/round_back_10"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
     </LinearLayout>
-
-
 </RelativeLayout>

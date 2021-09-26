@@ -8,11 +8,13 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp">
 
         <LinearLayout
+            android:id="@+id/searchBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -28,7 +30,17 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/raleway"
+            android:text="Mosiga"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
         <LinearLayout
+            android:id="@+id/menuBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -46,18 +58,18 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/raleway"
-            android:text="Mosiga"
-            android:textColor="#FFFFFF"
-            android:textSize="25dp" />
     </RelativeLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/musicRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar"
+        android:layout_below="@+id/topBar"
+        android:layout_marginBottom="10dp" />
+
     <LinearLayout
+        android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -78,6 +90,7 @@
                 android:text="00:00"/>
 
             <SeekBar
+                android:id="@+id/playerSeekBar"
                 android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,6 +119,7 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/previousBtn"
                 android:layout_marginEnd="20dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -114,6 +128,7 @@
                 android:padding="10dp"/>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/playPauseCard"
                 android:layout_width="110dp"
                 android:layout_height="120dp"
                 app:cardBackgroundColor="#330000"
@@ -124,6 +139,7 @@
                 android:outlineSpotShadowColor="#330000">
 
                 <ImageView
+                    android:id="@+id/playPauseImg"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_gravity="center"
@@ -131,6 +147,7 @@
             </androidx.cardview.widget.CardView>
 
             <ImageView
+                android:id="@+id/nextBtn"
                 android:layout_marginStart="20dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
